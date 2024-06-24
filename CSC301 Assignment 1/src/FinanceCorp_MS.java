@@ -139,13 +139,6 @@ public class FinanceCorp_MS
         System.out.println("To which customer would you like to bulk investments to? ");
         int choice = input.nextInt();
 
-        /* v
-          Each case within the switch checks if the investments were already added through a boolean element respective
-          to each customer. If false, AddBulkInvestments() is invoked (its parameter set based on the chosen customer),
-          and the boolean element is set to true to prevent the action from happening again.
-          If true, a notifying statement is printed.
-        */
-
         try {  //Encased in a 'try' due to a possible IOException occurring
             switch (choice) {
                 case 1:
