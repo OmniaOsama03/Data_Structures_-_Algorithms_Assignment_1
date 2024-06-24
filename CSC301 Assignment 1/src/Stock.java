@@ -1,12 +1,12 @@
-public class Stock_G2_1084505 extends Investment_G2_1084505
+public class Stock extends Investment
 {
     //The attributes specific to Stocks:
     private String sector;
     private double divYield;
 
     //Default & overloaded constructors
-    Stock_G2_1084505(){}
-    Stock_G2_1084505(String name, String symbol, int quantity, double purchasePrice, double marketValue, String sector, double divYield)
+    Stock(){}
+    Stock(String name, String symbol, int quantity, double purchasePrice, double marketValue, String sector, double divYield)
     {
         super( name,  symbol,  quantity,  purchasePrice,  marketValue);
 

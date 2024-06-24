@@ -5,10 +5,10 @@ import java.util.*;
 public class FinanceCorp_MS
 {
     // v Declaring 4 sample portfolios for different customers. Made static to ensure accessibility across methods
-    static ArrayList<Investment_G2_1084505> OmniaInvestments;
-    static ArrayList<Investment_G2_1084505> AalaInvestments;
-    static ArrayList<Investment_G2_1084505> ArwaInvestments;
-    static ArrayList<Investment_G2_1084505> OsamaInvestments;
+    static ArrayList<Investment> OmniaInvestments;
+    static ArrayList<Investment> AalaInvestments;
+    static ArrayList<Investment> ArwaInvestments;
+    static ArrayList<Investment> OsamaInvestments;
 
     static Boolean[] InvestmentsAdded = {false, false, false, false};
     // ^To ensure that a bulk addition of investments can be done once per customer. 4 elements for 4 sample customers.
@@ -18,12 +18,12 @@ public class FinanceCorp_MS
         Scanner input = new Scanner(System.in);
 
         //Creating sample stocks, bonds, and funds through polymorphism
-        Investment_G2_1084505 stock1 = new Stock_G2_1084505("Microsoft Corporation", "MSFT", 50, 7500, 6500, "Technology", 2.5);
-        Investment_G2_1084505 bond1 = new Bond("U.S. Treasury Bond", "US-TBond", 10, 12000, 10000,"U.S. Department of Treasury");
-        Investment_G2_1084505 fund1 = new MutualFund_G2_1084505("VTSM Index Fund", "VTSAX", 200, 40000, 38000, "Vanguard Group");
-        Investment_G2_1084505 stock2 = new Stock_G2_1084505("Alphabel Inc.", "GOOGL", 60, 75000, 90000, "Technology", 0.85);
-        Investment_G2_1084505 bond2 = new Bond("Corporate Bond- XYZ Corp.", "XYZ- Bond", 15, 18750, 17000, "XYZ Corporation");
-        Investment_G2_1084505 fund2 = new MutualFund_G2_1084505("Fidelity Contrafund", "FCNTX", 150, 29500, 30750, "Fidelity Investments");
+        Investment stock1 = new Stock("Microsoft Corporation", "MSFT", 50, 7500, 6500, "Technology", 2.5);
+        Investment bond1 = new Bond("U.S. Treasury Bond", "US-TBond", 10, 12000, 10000,"U.S. Department of Treasury");
+        Investment fund1 = new MutualFund("VTSM Index Fund", "VTSAX", 200, 40000, 38000, "Vanguard Group");
+        Investment stock2 = new Stock("Alphabel Inc.", "GOOGL", 60, 75000, 90000, "Technology", 0.85);
+        Investment bond2 = new Bond("Corporate Bond- XYZ Corp.", "XYZ- Bond", 15, 18750, 17000, "XYZ Corporation");
+        Investment fund2 = new MutualFund("Fidelity Contrafund", "FCNTX", 150, 29500, 30750, "Fidelity Investments");
 
         //Initializing the 4 portfolios & adding investments to each
         OmniaInvestments = new ArrayList<>();
@@ -231,7 +231,7 @@ public class FinanceCorp_MS
         }
     }
 
-    public static void AddNewInvestment(ArrayList<Investment_G2_1084505> portfolio)
+    public static void AddNewInvestment(ArrayList<Investment> portfolio)
     {
         Scanner input = new Scanner(System.in);
 
@@ -265,7 +265,7 @@ public class FinanceCorp_MS
                 double divYield = input.nextDouble();
 
                 //Adding a new stock to the portfolio.
-                portfolio.add(new Stock_G2_1084505(name, symbol, quantity, price, value, sector, divYield));
+                portfolio.add(new Stock(name, symbol, quantity, price, value, sector, divYield));
                 System.out.println("\nSuccessfully added the stock! ");
                 break;
 
@@ -283,7 +283,7 @@ public class FinanceCorp_MS
                 String manager = input.next();
 
                 //Adding a new fund to the portfolio.
-                portfolio.add(new MutualFund_G2_1084505(name, symbol, quantity, price, value, manager));
+                portfolio.add(new MutualFund(name, symbol, quantity, price, value, manager));
                 System.out.println("\nSuccessfully added the fund! ");
                 break;
 
@@ -291,12 +291,12 @@ public class FinanceCorp_MS
         }
     } //End of method AddNewInvestment
 
-    public static void UpdateDetail(ArrayList<Investment_G2_1084505> portfolio)
+    public static void UpdateDetail(ArrayList<Investment> portfolio)
     {
         Scanner input = new Scanner(System.in);
 
         int counter = 0; //Solely to number the investments as they get listed
-        for(Investment_G2_1084505 investment : portfolio)
+        for(Investment investment : portfolio)
         {
             System.out.print(counter + " ");
             System.out.println(investment.getName()); //Printing the names of each investment in the portfolio
@@ -349,12 +349,12 @@ public class FinanceCorp_MS
             case 6:
                 /*The 6th attribute listed could belong to a stock, bond, or fund. We'll check for the type of current
                   investment & update the respective variable */
-                if(portfolio.get(index) instanceof Stock_G2_1084505)
+                if(portfolio.get(index) instanceof Stock)
                 {
                     System.out.print("New sector: ");
                     String sector = input.next();
 
-                    ((Stock_G2_1084505) portfolio.get(index)).setSector(sector); //Explicit casting to Stocks to access .setSector()
+                    ((Stock) portfolio.get(index)).setSector(sector); //Explicit casting to Stocks to access .setSector()
                     System.out.println("\n Sector successfully updated to " + sector);
                 }
                 if(portfolio.get(index) instanceof Bond)
@@ -365,12 +365,12 @@ public class FinanceCorp_MS
                     ((Bond) portfolio.get(index)).setIssuer(issuer); //Explicit casting to Bond to access .setIssuer()
                     System.out.println("\n Bond Issuer successfully updated to " + issuer);
                 }
-                if(portfolio.get(index) instanceof MutualFund_G2_1084505)
+                if(portfolio.get(index) instanceof MutualFund)
                 {
                     System.out.print("New fund manager: ");
                     String manager = input.next();
 
-                    ((MutualFund_G2_1084505) portfolio.get(index)).setFundManager(manager); //Explicit casting to MutualFunds to access.setFundManager()
+                    ((MutualFund) portfolio.get(index)).setFundManager(manager); //Explicit casting to MutualFunds to access.setFundManager()
                     System.out.println("\n Fund manager successfully updated to " + manager);
                 }
                 break;
@@ -379,12 +379,12 @@ public class FinanceCorp_MS
                 current investment is cast to Stocks to access setDivYield()
                 */
 
-                if(portfolio.get(index) instanceof Stock_G2_1084505)
+                if(portfolio.get(index) instanceof Stock)
                 {
                     System.out.print("New dividend yield: ");
                     double divYield = input.nextDouble();
 
-                    ((Stock_G2_1084505) portfolio.get(index)).setDivYield(divYield);
+                    ((Stock) portfolio.get(index)).setDivYield(divYield);
                     System.out.println("\n Dividend yield successfully updated to " + divYield);
                 }
                 break;
@@ -392,10 +392,10 @@ public class FinanceCorp_MS
         }
     }//End of method UpdateDetail
 
-    public static void AddBulkInvestments(ArrayList<Investment_G2_1084505> portfolio) throws IOException
+    public static void AddBulkInvestments(ArrayList<Investment> portfolio) throws IOException
     {
         //v creating a scanner to read from the file.
-        try (Scanner scanner = new Scanner(new File("C:\\Users\\maado\\IdeaProjects\\CSC301 Assignment 1\\src\\Investments_G2_1084505.txt")))
+        try (Scanner scanner = new Scanner(new File("C:\\Users\\maado\\IdeaProjects\\CSC301 Assignment 1\\src\\Investments.txt")))
         {
             while (scanner.hasNextLine()) { //To check if the file has a subsequent line
                 String line = scanner.nextLine(); //Storing the current line in a string.
@@ -417,7 +417,7 @@ public class FinanceCorp_MS
                     String sector = investment[6];
                     Double divYield = Double.parseDouble(investment[7]);
 
-                    portfolio.add(new Stock_G2_1084505(name, symbol, quantity, price, value, sector, divYield));
+                    portfolio.add(new Stock(name, symbol, quantity, price, value, sector, divYield));
                 }
                 else if(investment[0].equalsIgnoreCase("Bond"))
                 {
@@ -429,7 +429,7 @@ public class FinanceCorp_MS
                 {
                     String manager = investment[6];
 
-                    portfolio.add(new MutualFund_G2_1084505(name, symbol, quantity, price, value, manager));
+                    portfolio.add(new MutualFund(name, symbol, quantity, price, value, manager));
                 }
             }
             System.out.println("Investments successfully added!");
@@ -438,11 +438,11 @@ public class FinanceCorp_MS
         }
     }//End of method AddBulkInvestments
 
-    public static void DisplayAllInvestments(ArrayList<Investment_G2_1084505> portfolio)
+    public static void DisplayAllInvestments(ArrayList<Investment> portfolio)
     {
         //Loops through the portfolio ArrayList, and displays each investment's details
         int count = 1; //Solely to number all investments
-        for(Investment_G2_1084505 investment : portfolio)
+        for(Investment investment : portfolio)
         {
             System.out.println(" \n\nINVESTMENT " + count);
             investment.DisplayDetails();
@@ -450,11 +450,11 @@ public class FinanceCorp_MS
         }
     }
 
-    public static void ComputeTotalValue(ArrayList<Investment_G2_1084505> portfolio)
+    public static void ComputeTotalValue(ArrayList<Investment> portfolio)
     {
         //Loops through the portfolio, invokes method ComputeValue() for each, and adds it to variable 'value'
         double value = 0;
-        for(Investment_G2_1084505 investment : portfolio)
+        for(Investment investment : portfolio)
         {
             value += investment.ComputeValue();
         }

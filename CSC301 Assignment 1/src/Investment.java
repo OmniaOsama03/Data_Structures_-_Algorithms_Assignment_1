@@ -1,4 +1,4 @@
-public abstract class Investment_G2_1084505 implements Investable
+public abstract class Investment implements Investable
 {
     //The common attributes of all investments:
     private String name;
@@ -8,8 +8,8 @@ public abstract class Investment_G2_1084505 implements Investable
     private double marketValue;
 
     //Default & Overloaded constructors:
-    Investment_G2_1084505(){}
-    Investment_G2_1084505(String name, String symbol, int quantity, double purchasePrice, double marketValue)
+    Investment(){}
+    Investment(String name, String symbol, int quantity, double purchasePrice, double marketValue)
     {
         this.name = name;
         this.symbol = symbol;

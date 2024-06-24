@@ -1,4 +1,4 @@
-public class Bond extends Investment_G2_1084505
+public class Bond extends Investment
 {
     //Attribute specific to Bonds:
     private String issuer;
