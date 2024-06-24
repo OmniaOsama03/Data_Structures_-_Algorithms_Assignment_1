@@ -1,0 +1,9 @@
+Stock Amazon.comInc. AMZN 30 45000 40000 Retail 0.8
+Stock Tesla,Inc. TSLA 15 22500 19000 Automotive 0.5
+Stock Netflix,Inc. NFLX 20 30000 26000 Entertainment 0.7
+Bond StateBond-California CAL-Bond 35 36000 34000 StateOfCalifornia
+Bond InternationalBondFund INTLBond 50 52000 49000 GlobalInvestmentGroup
+Bond CorporateBond-ABC ABC-Bond 28 28000 26500 ABCIndustries
+Fund AmericanFundsIncomeBuilder CAIBX 120 25000 24300 CapitalGroup
+Fund ColumbiaDividendIncomeFund LBSAX 110 22000 21400 ColumbiaThreadneedle
+Fund PIMCOTotalReturnFund PTTRX 90 18000 17500 PIMCO

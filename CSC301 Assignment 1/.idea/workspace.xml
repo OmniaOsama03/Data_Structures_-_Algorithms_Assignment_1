@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fdf6ba57-b6b8-4c9f-84dc-36aef2538e17" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CSC301 Assignment 1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bond_G2_1084505.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FinanceCorp_MS_G2_1084505.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Investable_G2_1084505.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Investment_G2_1084505.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Investments_G2_1084505.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MutualFund_G2_1084505.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Stock_G2_1084505.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2VuqZ2Uvy6GriktzJ8OgV8AuQ2f" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/maado/IdeaProjects/CSC202 Term Project",
+    "onboarding.tips.debug.path": "C:/Users/maado/IdeaProjects/CSC301 Assignment 1/src/Main.java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maado\IdeaProjects\CSC301 Assignment 1\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FinanceCorp_MS_G2_1084505" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FinanceCorp_MS_G2_1084505" />
+      <module name="CSC301 Assignment 1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FinanceCorp_MS_G2_1084505" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fdf6ba57-b6b8-4c9f-84dc-36aef2538e17" name="Changes" comment="" />
+      <created>1695696367600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695696367600</updated>
+    </task>
+    <servers />
+  </component>
+</project>
